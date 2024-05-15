@@ -1,0 +1,106 @@
+[bot_setting]
+request_timeout = 60000 # 1 menit, dalam milliseconds, 
+timezone = "Asia/Jakarta" # Harus sinkron dengan zona waktu database
+
+[language]
+bot_ready = "Bot berjalan!"
+
+[message]
+presence_empty = """
+Halo {shift.name} {user.name}
+
+📆 Tanggal : {currentTime.day}/{currentTime.month}/{currentTime.year}
+❎ Checkin: -
+❎ Checkout: -
+"""
+
+presence_check_in = """
+📆 Tanggal : {currentTime.day}/{currentTime.month}/{currentTime.year}
+✅ Checkin: {checkin.hour}:{checkin.minute}
+❎ Checkout: -
+"""
+
+presence_check_in_out = """
+📆 Tanggal : {currentTime.day}/{currentTime.month}/{currentTime.year}
+✅ Checkin: {checkin.hour}:{checkin.minute}
+✅ Checkout: {checkout.hour}:{checkout.minute}
+"""
+
+must_live_location = """
+Tolong gunakan live location!
+"""
+
+forward_forbidden = """
+Tolong jangan forward lokasi!
+"""
+
+id_not_found = """
+Nomor anda tidak ditemukan di database
+Tolong tulis nomor ID anda
+NIS untuk Siswa & NIK untuk Pegawai
+"""
+
+radius_too_far = """
+Jarak terlalu jauh dari tempat pusat!
+"""
+
+id_cannot_search = """
+ID Yang diberikan tidak ditemukan!
+"""
+
+id_already_defined = """
+ID Yang diberikan sudah mempunyai nomor telepon!
+"""
+
+success_define_number = """
+Sukses mengganti nomor telepon!
+Selamat Datang {shift.name} {user.name}
+"""
+
+command_usage = """
+Gunakan perintah "check in" atau "check out"
+"""
+
+already_check_in = """
+Sudah check-in
+"""
+
+not_checkin_time_before = """
+Belum memasuki waktu untuk check-in
+Waktu check-in mulai di jam {checkin.hour}:{checkin.minute}
+"""
+
+not_checkin_time_after = """
+Sudah melewati waktu untuk check-in
+Waktu check-in selesai di jam {checkin.hour}:{checkin.minute}
+"""
+
+send_location = """
+Silahkan kirim lokasi
+"""
+
+already_check_out = """
+Sudah check-out
+"""
+
+not_checkout_time_before = """
+Belum memasuki waktu untuk check-out
+Waktu check-out mulai di jam {checkout.hour}:{checkout.minute}
+"""
+
+not_checkout_time_after = """
+Sudah melewati waktu untuk check-out
+Waktu check-out selesai di jam {checkout.hour}:{checkout.minute}
+"""
+
+not_yet_checkin = """
+Belum check-in
+"""
+
+message_template = """
+*== Sistem Presensi {instance_name} ==*
+
+{message}
+
+*== Terima Kasih ==*
+"""

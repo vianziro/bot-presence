@@ -1,0 +1,27 @@
+{
+  "name": "presence-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "MrAdhit <adhityarimba97@gmail.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "express": "^4.18.2",
+    "geo-dist": "^1.0.2",
+    "js-sha256": "^0.9.0",
+    "luxon": "^3.3.0",
+    "mysql2": "^3.2.4",
+    "otpauth": "^9.1.2",
+    "qrcode-terminal": "^0.12.0",
+    "toml": "^3.0.0",
+    "whatsapp-web.js": "^1.20.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
